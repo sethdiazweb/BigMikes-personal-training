@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Big Mike's Personal Training. Learn about training methods, pricing, scheduling, and what to expect.">
+  <title>FAQ - Frequently Asked Questions | Big Mike's Personal Training</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .faq-item {
+      border-bottom: 1px solid #2A2A2A;
+      padding: var(--space-lg) 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.125rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #FFFFFF;
+      transition: color var(--transition-fast);
+      padding-right: var(--space-md);
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary:hover {
+      color: var(--primary-500);
+    }
+
+    .faq-item summary svg {
+      flex-shrink: 0;
+      transition: transform var(--transition-base);
+      color: var(--primary-500);
+    }
+
+    .faq-item[open] summary svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-item__answer {
+      margin-top: var(--space-md);
+      color: #9A9A9A;
+      line-height: 1.8;
+      padding-left: var(--space-sm);
+    }
+
+    .faq-item__answer p {
+      margin-bottom: var(--space-md);
+    }
+
+    .faq-item__answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-category {
+      margin-bottom: var(--space-4xl);
+    }
+
+    .faq-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-category__title {
+      font-size: 1.75rem;
+      color: var(--primary-500);
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-md);
+      border-bottom: 2px solid var(--primary-500);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#main" class="sr-only sr-only--focusable">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><path d="M12 20H28M12 20C12 20 14 16 16 16M12 20C12 20 14 24 16 24M28 20C28 20 26 16 24 16M28 20C28 20 26 24 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Big Mike's
+      </a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About Mike</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="transformations.html" class="nav__link">Transformations</a></li>
+        <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+        <li><a href="faq.html" class="nav__link nav__link--active">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn--primary nav__cta">Book a Call</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh;">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="badge badge--dark">Got Questions?</span>
+        <h1 class="hero__title">Frequently Asked Questions</h1>
+        <p class="hero__description">Everything you need to know about training with Big Mike. Can't find your answer? Reach out and I'll get back to you.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+
+        <!-- Training Approach & Methods -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">Training Approach & Methods</h2>
+
+          <details class="faq-item">
+            <summary>
+              What's your training philosophy?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I believe in building sustainable habits that fit your real life. No cookie-cutter programs or unrealistic expectations. We'll focus on progressive strength training, functional movements, and creating a routine you can actually stick with long-term.</p>
+              <p>My approach is honest and straightforward - I'm here to help you get stronger and feel better, not sell you on quick fixes that don't work.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What training methods do you use?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I focus on compound movements and progressive overload - the fundamentals that actually work. We'll incorporate strength training, conditioning work, and mobility exercises based on your specific goals.</p>
+              <p>Everything is tailored to your fitness level, available equipment, and what your body responds to best. I stay current with training methods and apply what's proven to work.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you work with beginners?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Absolutely! I love working with beginners. We'll start with the basics, build proper form, and progress at a pace that feels challenging but achievable. No judgment, no intimidation - just solid coaching to help you build confidence and strength.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can you help with specific goals like weight loss or muscle building?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes! Whether you want to lose fat, build muscle, get stronger, or improve athletic performance, we'll create a program designed around your specific goals. I'll also provide nutrition guidance to support your training.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Pricing & Packages -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">Pricing & Packages</h2>
+
+          <details class="faq-item">
+            <summary>
+              How much does personal training cost?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I offer three main packages:</p>
+              <p><strong>Starter Package:</strong> $199/month - 4 sessions, custom workout plan, email support</p>
+              <p><strong>Transformation Package:</strong> $349/month - 12 sessions, nutrition plan, weekly check-ins, 24/7 messaging support (Most Popular)</p>
+              <p><strong>Elite Package:</strong> $499/month - Unlimited sessions, premium nutrition coaching, daily check-ins, priority scheduling</p>
+              <p>I also offer single sessions at $75, group training at $25/session, and online coaching at $149/month. Check out the <a href="pricing.html" style="color: var(--primary-500); text-decoration: underline;">pricing page</a> for full details.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you require a long-term contract?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>No contracts! All packages are month-to-month. You can cancel anytime with 7 days notice. I believe in earning your business every month through great results and service, not locking you into a contract.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you offer a money-back guarantee?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes! If you're not satisfied with your first session, I'll give you a full refund. I'm that confident you'll love training with me and see the value in what we do together.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What payment methods do you accept?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I accept credit cards, debit cards, Venmo, and PayPal. Monthly packages are billed automatically on the same day each month for your convenience.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Scheduling & Availability -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">Scheduling & Availability</h2>
+
+          <details class="faq-item">
+            <summary>
+              What are your training hours?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I'm available Monday through Saturday from 6:00 AM to 8:00 PM. I'm flexible and can work around your schedule to find times that work best for you. Early morning and evening slots are popular, so book ahead to secure your preferred times.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              How far in advance do I need to schedule sessions?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I recommend booking at least a week in advance to get your preferred time slots. That said, I'll do my best to accommodate last-minute requests when my schedule allows.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What if I need to reschedule or cancel a session?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Life happens! You can reschedule sessions with 24 hours notice at no charge. Sessions cancelled with less than 24 hours notice will be counted as completed. This policy helps me manage my schedule and serve all my clients fairly.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do unused sessions roll over to the next month?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Sessions expire at the end of each month, so I encourage you to use them! Consistency is key to seeing results. If you know you'll need to miss sessions due to vacation or other commitments, let me know in advance and we can work something out.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Online vs In-Person Training -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">Online vs In-Person Training</h2>
+
+          <details class="faq-item">
+            <summary>
+              Where do you train clients?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>I'm based in Elizabethtown, PA and train clients at local gyms and private facilities. I can also come to your home gym if you have the necessary equipment. Online coaching is available for clients anywhere.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              How does online training work?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Online coaching includes custom workout programs delivered through an app, weekly video check-ins where we review your form and progress, and ongoing messaging support. You'll record your workouts and send me videos, and I'll provide feedback and adjustments as needed.</p>
+              <p>It's perfect for people who travel frequently, have unpredictable schedules, or simply prefer training on their own time with expert guidance.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can I switch between online and in-person training?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Absolutely! Many of my clients do a hybrid approach - in-person sessions a couple times a month with online coaching in between. We can customize a plan that works for your schedule and budget.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- First Session & Getting Started -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">First Session & Getting Started</h2>
+
+          <details class="faq-item">
+            <summary>
+              What should I expect in my first session?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Your first session starts with a fitness assessment where we'll discuss your goals, health history, current fitness level, and any injuries or limitations. Then we'll do a movement assessment to see how your body moves and identify areas to work on.</p>
+              <p>After that, we'll dive into a workout so you can experience my training style. I'll teach you proper form on key exercises and we'll establish a baseline for your strength and conditioning.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What should I bring to my first session?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Wear comfortable athletic clothes and proper training shoes. Bring a water bottle and a towel. If you have any medical conditions or take medications that affect exercise, please bring that information to discuss.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do I need to be in shape before starting?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Not at all! You're hiring me to help you GET in shape. I'll meet you wherever you are and build a program that's appropriate for your current fitness level. That's the whole point of personal training.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What if I have injuries or physical limitations?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>We'll work around them! Let me know about any injuries, surgeries, or conditions during our initial assessment. I'll modify exercises as needed and work with your healthcare providers if necessary to ensure safe, effective training.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Results & Expectations -->
+        <div class="faq-category">
+          <h2 class="faq-category__title">Results & Expectations</h2>
+
+          <details class="faq-item">
+            <summary>
+              How long before I see results?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>You'll feel different within 2-3 weeks - more energy, better mood, improved sleep. You'll start noticing physical changes (strength gains, better endurance) within 4-6 weeks. Visible body composition changes typically show up around 8-12 weeks with consistent training and nutrition.</p>
+              <p>Everyone's timeline is different based on starting point, consistency, nutrition, and lifestyle factors. The key is staying consistent and trusting the process.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              How often should I train per week?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>For most people, 3-4 sessions per week is the sweet spot for great results without burnout. If you're just starting out, 2-3 times per week is perfect. More advanced clients might train 4-5 times weekly.</p>
+              <p>Consistency matters more than frequency - training twice a week every week beats training 5 times one week and zero the next.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do you provide nutrition guidance?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes! Nutrition is included in the Transformation and Elite packages. I'll provide general nutrition guidance, meal planning ideas, and accountability. I focus on sustainable eating habits that support your training and fit your lifestyle.</p>
+              <p>I'm not a registered dietitian, so I don't provide medical nutrition therapy. For specific medical conditions or complex dietary needs, I'll refer you to a qualified professional.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What if I'm not seeing the results I want?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>We'll troubleshoot together. Usually it comes down to consistency, nutrition, sleep, or stress management. I'll help identify what's holding you back and adjust your program accordingly. Progress isn't always linear, but if we're not moving in the right direction, we'll change the approach.</p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--dark">
+      <div class="container text-center">
+        <h2 style="margin-bottom: var(--space-md);">Still Have Questions?</h2>
+        <p style="color: var(--steel-600); max-width: 600px; margin: 0 auto var(--space-2xl); font-size: 1.125rem;">I'm here to help. Reach out and I'll get back to you with answers. Or better yet, book a free consultation and we can talk through everything in person.</p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn--secondary btn--lg">Contact Me</a>
+          <a href="booking.html" class="btn btn--primary btn--lg">Book Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Big Mike's Personal Training</a>
+          <p class="footer__tagline">Transform your body. Transform your life.</p>
+        </div>
+        <div class="footer__column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Personal Training</a></li>
+            <li><a href="services.html">Group Training</a></li>
+            <li><a href="services.html">Online Coaching</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+12232211872">(223) 221-1872</a></li>
+            <li><a href="mailto:michaelmcgovern28097@gmail.com">Email Me</a></li>
+            <li>Elizabethtown, PA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Big Mike's Personal Training. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

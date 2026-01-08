@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your personal training session with Big Mike. Schedule your free consultation or training appointment online.">
+  <title>Book a Session | Big Mike's Personal Training</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Calendly styles -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><path d="M12 20H28M12 20C12 20 14 16 16 16M12 20C12 20 14 24 16 24M28 20C28 20 26 16 24 16M28 20C28 20 26 24 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Big Mike's
+      </a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About Mike</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="transformations.html" class="nav__link">Transformations</a></li>
+        <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn--primary nav__cta">Book a Call</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 50vh;">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="badge badge--dark">Get Started</span>
+        <h1 class="hero__title">Book Your Session</h1>
+        <p class="hero__description">Schedule your free consultation or training session below.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 350px; gap: var(--space-4xl);">
+          <!-- Calendly Widget -->
+          <div>
+            <h2 class="mb-lg">Select a Time</h2>
+
+            <!-- Calendly inline widget - Replace with actual Calendly URL -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/bigmike/consultation" style="min-width: 320px; height: 700px; background: var(--bg-light); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center;">
+              <div class="text-center" style="padding: var(--space-2xl);">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--steel-400)" stroke-width="2" style="margin: 0 auto var(--space-lg);">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <path d="M16 2v4"/>
+                  <path d="M8 2v4"/>
+                  <path d="M3 10h18"/>
+                </svg>
+                <h3 style="color: var(--steel-600); margin-bottom: var(--space-md);">Calendly Widget</h3>
+                <p style="color: var(--steel-500); margin-bottom: var(--space-lg);">
+                  To activate scheduling, replace the Calendly URL in the code with your actual Calendly link.
+                </p>
+                <a href="https://calendly.com" target="_blank" class="btn btn--secondary">Set Up Calendly</a>
+              </div>
+            </div>
+
+            <p style="margin-top: var(--space-lg); color: var(--steel-500); font-size: 0.875rem;">
+              Can't find a time that works? <a href="contact.html" style="color: var(--primary-500);">Contact me</a> directly and we'll figure it out.
+            </p>
+          </div>
+
+          <!-- Sidebar -->
+          <aside>
+            <div class="card mb-xl">
+              <h3 class="mb-lg">What to Expect</h3>
+              <ul style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <li style="display: flex; gap: var(--space-md);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)" stroke-width="2" style="flex-shrink: 0;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                  </svg>
+                  <span>30-minute free consultation</span>
+                </li>
+                <li style="display: flex; gap: var(--space-md);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)" stroke-width="2" style="flex-shrink: 0;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                  </svg>
+                  <span>Discuss your goals and history</span>
+                </li>
+                <li style="display: flex; gap: var(--space-md);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)" stroke-width="2" style="flex-shrink: 0;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                  </svg>
+                  <span>Learn about training options</span>
+                </li>
+                <li style="display: flex; gap: var(--space-md);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)" stroke-width="2" style="flex-shrink: 0;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                  </svg>
+                  <span>Get your questions answered</span>
+                </li>
+                <li style="display: flex; gap: var(--space-md);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)" stroke-width="2" style="flex-shrink: 0;">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                  </svg>
+                  <span>No pressure, no commitment</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card mb-xl">
+              <h3 class="mb-lg">Cancellation Policy</h3>
+              <p style="color: var(--steel-600); font-size: 0.9375rem;">
+                Need to reschedule? No problem! Just give at least 24 hours notice. Cancellations with less than 24 hours notice may be charged as a completed session.
+              </p>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, var(--steel-800), var(--steel-900)); color: var(--bg-white);">
+              <h3 class="mb-md" style="color: var(--bg-white);">Prefer to Call?</h3>
+              <p style="color: var(--steel-300); margin-bottom: var(--space-lg);">
+                Give me a call and we can schedule over the phone.
+              </p>
+              <a href="tel:+12232211872" class="btn btn--primary btn--block">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                (223) 221-1872
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Big Mike's Personal Training</a>
+          <p class="footer__tagline">Transform your body. Transform your life.</p>
+        </div>
+        <div class="footer__column"><h4>Services</h4><ul><li><a href="services.html">Personal Training</a></li><li><a href="services.html">Group Training</a></li></ul></div>
+        <div class="footer__column"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+        <div class="footer__column"><h4>Contact</h4><ul><li><a href="tel:+12232211872">(223) 221-1872</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 Big Mike's Personal Training.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Uncomment when you have a real Calendly URL -->
+  <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+</body>
+</html>
