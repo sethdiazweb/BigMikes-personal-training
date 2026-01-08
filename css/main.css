@@ -63,7 +63,7 @@
   /* ========== BACKGROUNDS - DARK THEME ========== */
   --bg-dark: #000000;
   --bg-light: #0A0A0A;
-  --bg-white: #000000;
+  --bg-white: #FFFFFF;  /* Fixed: was incorrectly set to #000000 */
   --bg-card: #121212;
   --bg-card-hover: #1A1A1A;
   --bg-section-alt: #1A0505;
@@ -91,11 +91,12 @@
   --radius-full: 9999px;  /* Pill shape */
 
   /* ========== SHADOWS ========== */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
   --shadow-glow: 0 0 40px rgba(220, 38, 38, 0.3);
+  --shadow-glow-hover: 0 0 60px rgba(220, 38, 38, 0.4), 0 0 20px rgba(249, 115, 22, 0.2);
 
   /* ========== TRANSITIONS ========== */
   --transition-fast: 150ms ease;
@@ -229,6 +230,30 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
 h4 { font-size: 1.25rem; }
 
+/* Typography Hierarchy */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.text-subhead {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--primary-500);
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--steel-500);
+}
+
 p {
   margin-bottom: var(--space-md);
 }
@@ -315,10 +340,48 @@ p:last-child {
   color: var(--steel-600);
 }
 
+.section__header h2::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
+  margin: 0 auto var(--space-md);
+  border-radius: var(--radius-full);
+}
+
 /* Section CTA */
 .section__cta {
   text-align: center;
   margin-top: var(--space-3xl);
+}
+
+/* Decorative Background Patterns */
+.section--pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(220, 38, 38, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section--grid-pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* --------------------------------------------------------------------------
@@ -378,9 +441,9 @@ p:last-child {
 }
 
 .btn--primary:hover {
-  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+  background: linear-gradient(135deg, var(--primary-600), var(--accent-600));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5), 0 4px 10px rgba(249, 115, 22, 0.2);
 }
 
 /* Glowing button animation for hero CTA */
@@ -427,6 +490,31 @@ p:last-child {
 
 .btn--block {
   width: 100%;
+}
+
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn--primary:hover::after {
+  left: 100%;
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 0.1s ease;
 }
 
 /* Loading state */
@@ -485,6 +573,23 @@ p:last-child {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Gradient Accents */
+.gradient-accent {
+  background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+}
+
+.gradient-accent-subtle {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(249, 115, 22, 0.05));
+}
+
+.text-accent {
+  color: var(--accent-500);
+}
+
+.bg-accent-subtle {
+  background: rgba(249, 115, 22, 0.08);
+}
+
 /* --------------------------------------------------------------------------
    AVAILABILITY BADGE
    - Urgency indicator with pulsing dot
@@ -521,18 +626,49 @@ p:last-child {
    - General card component
    -------------------------------------------------------------------------- */
 .card {
-  background: #121212;
+  background: linear-gradient(180deg, #141414 0%, #121212 100%);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: 1px solid #2A2A2A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.2);
-  border-color: var(--primary-500);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.15), 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.card--gradient-border {
+  position: relative;
+  background: #121212;
+  border: none;
+}
+
+.card--gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.3), rgba(249, 115, 22, 0.15), rgba(42, 42, 42, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .card__icon {
@@ -542,9 +678,16 @@ p:last-child {
   width: 64px;
   height: 64px;
   margin-bottom: var(--space-lg);
-  background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--accent-500) 100%);
   border-radius: var(--radius-lg);
   color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  transition: all var(--transition-base);
+}
+
+.card:hover .card__icon {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4), 0 4px 10px rgba(249, 115, 22, 0.2);
 }
 
 .card__icon svg {
@@ -682,7 +825,7 @@ p:last-child {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--bg-white);
+  background: #FFFFFF;
   transition: all var(--transition-base);
 }
 
@@ -1644,13 +1787,31 @@ p:last-child {
    -------------------------------------------------------------------------- */
 [data-animate] {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-animate].animated {
   opacity: 1;
   transform: translateY(0);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(-30px);
+}
+
+[data-animate="fade-left"].animated {
+  transform: translateX(0);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(30px);
+}
+
+[data-animate="fade-right"].animated {
+  transform: translateX(0);
 }
 
 /* Stagger animation delay for grid items */

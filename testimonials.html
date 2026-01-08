@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Read success stories from Big Mike's Personal Training clients. Real transformations, real results.">
-  <title>Success Stories | Big Mike's Personal Training</title>
+  <meta name="description" content="Be a founding client at Big Mike's Personal Training. Get personalized attention, founding client rates, and help shape Elizabethtown's newest personal training business.">
+  <title>Be Our First Success Story | Big Mike's Personal Training</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,51 @@
 
   <style>
     .testimonial-card {
-      background: var(--bg-white);
+      background: linear-gradient(180deg, #151515 0%, #121212 100%);
       border-radius: var(--radius-xl);
       padding: var(--space-xl);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
     }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-lg);
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: rgba(220, 38, 38, 0.1);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .testimonial-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(220, 38, 38, 0.12), 0 6px 20px rgba(0, 0, 0, 0.4);
+      border-color: rgba(220, 38, 38, 0.2);
+    }
+
+    .testimonial-card__stars {
+      color: var(--accent-500);
+      margin-bottom: var(--space-md);
+    }
+
     .testimonial-card__header {
       display: flex;
       align-items: center;
@@ -56,6 +96,153 @@
       color: var(--steel-700);
       line-height: 1.8;
     }
+
+    /* Founding Client Styles */
+    .founding-intro {
+      max-width: 800px;
+      margin: 0 auto var(--space-3xl);
+      text-align: center;
+    }
+
+    .founding-intro__text {
+      font-size: 1.125rem;
+      color: var(--steel-400);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .benefit-card {
+      background: linear-gradient(180deg, #151515 0%, #121212 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all var(--transition-base);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(220, 38, 38, 0.12), 0 6px 20px rgba(0, 0, 0, 0.4);
+      border-color: rgba(220, 38, 38, 0.2);
+    }
+
+    .benefit-card__icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--space-md);
+      background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .benefit-card__icon svg {
+      width: 32px;
+      height: 32px;
+      color: white;
+    }
+
+    .benefit-card__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: #FFFFFF;
+    }
+
+    .benefit-card__text {
+      color: var(--steel-400);
+      line-height: 1.7;
+    }
+
+    .story-placeholder {
+      background: linear-gradient(180deg, #151515 0%, #121212 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      border: 2px dashed rgba(220, 38, 38, 0.3);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+
+    .story-placeholder:hover {
+      border-color: rgba(220, 38, 38, 0.5);
+      background: linear-gradient(180deg, #1a1a1a 0%, #151515 100%);
+    }
+
+    .story-placeholder__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--primary-500);
+      margin-bottom: var(--space-md);
+    }
+
+    .story-placeholder__text {
+      color: var(--steel-400);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .commitment-section {
+      background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      max-width: 800px;
+      margin: var(--space-3xl) auto 0;
+    }
+
+    .commitment-section__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+
+    .commitment-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .commitment-list__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      color: var(--steel-400);
+    }
+
+    .commitment-list__check {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: var(--primary-500);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .commitment-list__check svg {
+      width: 14px;
+      height: 14px;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -86,9 +273,9 @@
     <section class="hero" style="min-height: 60vh;">
       <div class="hero__overlay"></div>
       <div class="container hero__content">
-        <span class="badge badge--dark">Success Stories</span>
-        <h1 class="hero__title">Building Success Stories</h1>
-        <p class="hero__description">I'm building my reputation one client at a time. Here's what people are saying about training with me.</p>
+        <span class="badge badge--dark">Founding Client Opportunity</span>
+        <h1 class="hero__title">Your Story Could Be Here</h1>
+        <p class="hero__description">I'm launching my personal training business in Elizabethtown, PA, and I'm looking for motivated individuals ready to become my first success stories.</p>
       </div>
     </section>
 
@@ -97,91 +284,138 @@
       <div class="container">
         <div style="display: flex; justify-content: center; gap: var(--space-4xl); flex-wrap: wrap;">
           <div class="text-center">
-            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">5+</div>
-            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">Years Training</div>
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">CPR</div>
+            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">First Aid Certified</div>
           </div>
           <div class="text-center">
             <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">100%</div>
             <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">Dedication</div>
           </div>
           <div class="text-center">
-            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">24/7</div>
-            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">Support Available</div>
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">Fresh</div>
+            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">Perspective</div>
           </div>
           <div class="text-center">
-            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">Real</div>
-            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">Results</div>
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--primary-500);">Hungry</div>
+            <div style="color: var(--steel-400); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">To Prove Myself</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Grid -->
+    <!-- Founding Client Introduction -->
     <section class="section">
       <div class="container">
+        <div class="founding-intro" data-animate>
+          <h2 style="margin-bottom: var(--space-lg);">Be a Founding Client</h2>
+          <p class="founding-intro__text">
+            Every successful trainer started somewhere. I'm 19, certified in CPR and First Aid, and ready to pour everything I have into helping my first clients succeed. When you train with me now, you're not just getting a workout - you're getting a trainer with something to prove and the time to prove it with you.
+          </p>
+          <p class="founding-intro__text">
+            This is your opportunity to get in on the ground floor. No waitlists. No crowded schedule. Just focused, personalized training from someone who will remember your name, your goals, and what drives you.
+          </p>
+        </div>
+
+        <!-- Benefits Grid -->
         <div class="grid grid--3">
-          <!-- Testimonial 1 -->
-          <article class="testimonial-card" data-animate>
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar">JD</div>
-              <div>
-                <div class="testimonial-card__name">John D.</div>
-                <div class="testimonial-card__result">Making real progress</div>
-              </div>
+          <!-- Benefit 1 -->
+          <article class="benefit-card" data-animate>
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
             </div>
-            <div class="testimonial-card__rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            </div>
-            <blockquote class="testimonial-card__quote">
-              "Mike's energy is contagious. He knows his stuff and really cares about getting you results. I've been training with him for a few months and I'm already seeing changes I never thought possible."
-            </blockquote>
+            <h3 class="benefit-card__title">Undivided Attention</h3>
+            <p class="benefit-card__text">
+              With a small client roster, you get my full focus. I'm not juggling dozens of clients - I'm investing in your success because your results are my reputation.
+            </p>
           </article>
 
-          <!-- Testimonial 2 -->
-          <article class="testimonial-card" data-animate>
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar">SM</div>
-              <div>
-                <div class="testimonial-card__name">Sarah M.</div>
-                <div class="testimonial-card__result">Gained confidence</div>
-              </div>
+          <!-- Benefit 2 -->
+          <article class="benefit-card" data-animate>
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
             </div>
-            <div class="testimonial-card__rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            </div>
-            <blockquote class="testimonial-card__quote">
-              "As a busy mom, I needed someone who understood that fitness has to fit into real life. Mike gets it. He's flexible, supportive, and I'm finally seeing progress without feeling overwhelmed."
-            </blockquote>
+            <h3 class="benefit-card__title">Founding Client Rates</h3>
+            <p class="benefit-card__text">
+              Lock in introductory pricing that won't be available once my schedule fills up. As a founding client, you'll keep these rates for as long as you train with me.
+            </p>
           </article>
 
-          <!-- Testimonial 3 -->
-          <article class="testimonial-card" data-animate>
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar">MR</div>
-              <div>
-                <div class="testimonial-card__name">Mike R.</div>
-                <div class="testimonial-card__result">Building consistency</div>
-              </div>
+          <!-- Benefit 3 -->
+          <article class="benefit-card" data-animate>
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
             </div>
-            <div class="testimonial-card__rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-500)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            </div>
-            <blockquote class="testimonial-card__quote">
-              "I've tried and quit the gym more times than I can count. What's different with Mike is he actually makes it sustainable. No crazy diets, no burnout - just solid training that works."
-            </blockquote>
+            <h3 class="benefit-card__title">Shape the Business</h3>
+            <p class="benefit-card__text">
+              Your feedback matters. Tell me what's working, what isn't, and what you wish you had. Help me build a training experience that actually serves people like you.
+            </p>
           </article>
+        </div>
+
+        <!-- Story Placeholders -->
+        <div style="margin-top: var(--space-3xl);">
+          <h2 class="text-center" style="margin-bottom: var(--space-xl);">Future Success Stories</h2>
+          <div class="grid grid--3">
+            <div class="story-placeholder" data-animate>
+              <h3 class="story-placeholder__title">Your Transformation</h3>
+              <p class="story-placeholder__text">This spot is reserved for someone ready to commit to their fitness journey. Could it be you?</p>
+            </div>
+            <div class="story-placeholder" data-animate>
+              <h3 class="story-placeholder__title">Your Achievement</h3>
+              <p class="story-placeholder__text">Whether it's losing weight, building strength, or gaining confidence - your story belongs here.</p>
+            </div>
+            <div class="story-placeholder" data-animate>
+              <h3 class="story-placeholder__title">Your Victory</h3>
+              <p class="story-placeholder__text">Every great trainer has clients who helped build their legacy. Be part of mine from day one.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Commitment -->
+        <div class="commitment-section" data-animate>
+          <h3 class="commitment-section__title">My Commitment to You</h3>
+          <div class="commitment-list">
+            <div class="commitment-list__item">
+              <div class="commitment-list__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>I'll show up prepared, energized, and ready to help you push past your limits every single session.</span>
+            </div>
+            <div class="commitment-list__item">
+              <div class="commitment-list__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>Your goals become my goals. I succeed when you succeed - it's that simple.</span>
+            </div>
+            <div class="commitment-list__item">
+              <div class="commitment-list__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>I'll be honest with you, even when it's hard. Real progress requires real accountability.</span>
+            </div>
+            <div class="commitment-list__item">
+              <div class="commitment-list__check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>I'll continuously learn and improve my craft to give you the best training possible.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -189,11 +423,11 @@
     <!-- CTA -->
     <section class="section" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-700));">
       <div class="container text-center">
-        <h2 style="color: var(--bg-white); margin-bottom: var(--space-md);">Ready to Write Your Success Story?</h2>
+        <h2 style="color: #FFFFFF; margin-bottom: var(--space-md);">Ready to Be My First Success Story?</h2>
         <p style="color: var(--primary-100); max-width: 600px; margin: 0 auto var(--space-2xl);">
-          Join hundreds of satisfied clients who've transformed their bodies and lives.
+          Book a free consultation and let's talk about your goals. No pressure, no commitment - just an honest conversation about how I can help you get where you want to be.
         </p>
-        <a href="booking.html" class="btn btn--secondary btn--lg">Start Your Transformation</a>
+        <a href="booking.html" class="btn btn--secondary btn--lg">Book Your Free Consultation</a>
       </div>
     </section>
   </main>
@@ -210,7 +444,13 @@
         <div class="footer__column"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
         <div class="footer__column"><h4>Contact</h4><ul><li><a href="tel:+12232211872">(223) 221-1872</a></li></ul></div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2024 Big Mike's Personal Training.</p></div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Big Mike's Personal Training. All rights reserved.</p>
+        <nav>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+      </div>
     </div>
   </footer>
 

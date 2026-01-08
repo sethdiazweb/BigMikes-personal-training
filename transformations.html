@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Transformations - Big Mike's Personal Training</title>
-    <meta name="description" content="See the incredible transformations from Big Mike's Personal Training clients. Your success story starts here.">
+    <title>Start Your Transformation - Big Mike's Personal Training</title>
+    <meta name="description" content="Be among the first to transform with Big Mike's Personal Training. Founding client benefits, personalized programs, and dedicated support in Elizabethtown, PA.">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -12,100 +12,33 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Client Transformations - Big Mike's Personal Training">
-    <meta property="og:description" content="See the incredible transformations from Big Mike's Personal Training clients.">
+    <meta property="og:title" content="Start Your Transformation - Big Mike's Personal Training">
+    <meta property="og:description" content="Be among the first to transform with Big Mike's Personal Training. Founding client benefits and personalized programs.">
     <meta property="og:url" content="https://bigmikespersonaltraining.com/transformations.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
 
     <style>
-        /* CSS Variables */
+        /* ==========================================================================
+           Transformations Page - Page-Specific Styles
+           ========================================================================== */
+
+        /* Page-specific variables */
         :root {
-            --color-bg-dark: #0A0A0A;
-            --color-card-bg: #1A1A1A;
-            --color-red-primary: #EF4444;
-            --color-red-dark: #DC2626;
-            --color-orange-accent: #F97316;
-            --color-text-light: #E5E5E5;
-            --color-text-gray: #A3A3A3;
-            --color-border: rgba(255, 255, 255, 0.1);
-
-            --font-display: 'DM Serif Display', serif;
-            --font-body: 'Inter', sans-serif;
-
-            --max-width: 1200px;
-            --spacing-base: 8px;
-            --radius: 8px;
-            --radius-card: 16px;
-
             --section-padding-mobile: 48px;
             --section-padding-tablet: 64px;
             --section-padding-desktop: 96px;
+            --max-width: 1200px;
+            --color-border: rgba(255, 255, 255, 0.1);
         }
 
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--color-bg-dark);
-            color: var(--color-text-light);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            font-weight: 400;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: 1.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* Container */
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Navigation */
+        /* Navigation - Page-specific styling */
         .nav {
             position: fixed;
             top: 0;
@@ -130,9 +63,10 @@
         .nav-logo {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            color: var(--color-text-light);
-            font-weight: 400;
-            letter-spacing: -0.02em;
+            color: #E5E5E5;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -147,27 +81,30 @@
         }
 
         .nav-links a {
-            color: #D4D4D4;
+            color: var(--steel-700);
             font-size: 0.9375rem;
             font-weight: 500;
             transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--color-text-light);
+            color: #FFFFFF;
         }
 
         .nav-cta {
-            background-color: var(--color-red-primary);
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
             color: white;
             padding: 0.625rem 1.25rem;
-            border-radius: var(--radius);
+            border-radius: var(--radius-md);
             font-weight: 600;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: all 0.2s ease;
         }
 
         .nav-cta:hover {
-            background-color: var(--color-red-dark);
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-600));
             transform: translateY(-2px);
             color: white;
         }
@@ -187,7 +124,7 @@
             display: block;
             width: 24px;
             height: 2px;
-            background-color: var(--color-text-light);
+            background-color: #E5E5E5;
             transition: all 0.3s ease;
         }
 
@@ -229,7 +166,7 @@
         }
 
         .mobile-menu a {
-            color: #D4D4D4;
+            color: var(--steel-700);
             font-size: 1.125rem;
             font-weight: 500;
             display: block;
@@ -237,7 +174,7 @@
         }
 
         .mobile-menu a:hover {
-            color: var(--color-text-light);
+            color: #FFFFFF;
         }
 
         .mobile-menu .nav-cta {
@@ -245,78 +182,6 @@
             width: 100%;
             margin-top: 0.5rem;
             text-align: center;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 1rem;
-            text-align: center;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
-            min-height: 44px;
-        }
-
-        .btn-primary {
-            background-color: var(--color-red-primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--color-red-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-primary:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5), 0 2px 8px rgba(239, 68, 68, 0.3);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
-        }
-
-        /* Skip to Content Link */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        .sr-only--focusable:focus {
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            width: auto;
-            height: auto;
-            padding: 1rem 1.5rem;
-            margin: 0;
-            overflow: visible;
-            clip: auto;
-            white-space: normal;
-            background: var(--color-red-primary);
-            color: white;
-            font-weight: 600;
-            border-radius: var(--radius);
-            z-index: 9999;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        /* Focus Styles */
-        *:focus-visible {
-            outline: 2px solid var(--color-red-primary);
-            outline-offset: 2px;
         }
 
         /* Hero Section */
@@ -336,13 +201,13 @@
 
         .hero h1 {
             font-size: 3rem;
-            color: var(--color-text-light);
+            color: #FFFFFF;
             margin-bottom: 1rem;
         }
 
         .hero p {
             font-size: 1.125rem;
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             max-width: 700px;
             margin: 0 auto 2rem;
             line-height: 1.7;
@@ -362,8 +227,8 @@
 
         /* Transformation Card */
         .transformation-card {
-            background: var(--color-card-bg);
-            border-radius: var(--radius-card);
+            background: #1A1A1A;
+            border-radius: var(--radius-xl);
             overflow: hidden;
             border: 1px solid var(--color-border);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -372,7 +237,7 @@
 
         .transformation-card:hover {
             transform: translateY(-4px);
-            border-color: var(--color-red-primary);
+            border-color: var(--primary-500);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
         }
 
@@ -412,7 +277,7 @@
         }
 
         .transformation-placeholder {
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-size: 0.875rem;
             text-align: center;
             padding: 2rem;
@@ -442,13 +307,13 @@
             font-family: var(--font-display);
             font-size: 2rem;
             font-weight: 700;
-            color: var(--color-red-primary);
+            color: var(--primary-500);
             line-height: 1;
         }
 
         .transformation-unit {
             font-size: 1rem;
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-weight: 500;
         }
 
@@ -457,20 +322,20 @@
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.875rem;
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-weight: 500;
         }
 
         .transformation-name {
             font-size: 1.125rem;
             font-weight: 600;
-            color: var(--color-text-light);
+            color: #FFFFFF;
             margin-bottom: 0.5rem;
         }
 
         .transformation-quote {
             font-style: italic;
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-size: 0.9375rem;
             line-height: 1.6;
         }
@@ -479,8 +344,8 @@
         .cta-section {
             text-align: center;
             padding: 4rem 2rem;
-            background: var(--color-card-bg);
-            border-radius: var(--radius-card);
+            background: #1A1A1A;
+            border-radius: var(--radius-xl);
             border: 1px solid var(--color-border);
         }
 
@@ -490,9 +355,9 @@
             justify-content: center;
             width: 80px;
             height: 80px;
-            background: rgba(239, 68, 68, 0.1);
+            background: rgba(220, 38, 38, 0.1);
             border-radius: 50%;
-            color: var(--color-red-primary);
+            color: var(--primary-500);
             margin-bottom: 1.5rem;
         }
 
@@ -501,16 +366,242 @@
         }
 
         .cta-section p {
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-size: 1.125rem;
             max-width: 500px;
             margin: 0 auto 2rem;
             line-height: 1.7;
         }
 
+        /* Journey Section */
+        .journey-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .journey-intro h2 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .journey-intro p {
+            color: var(--steel-600);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .journey-card {
+            background: #1A1A1A;
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .journey-card:hover {
+            border-color: var(--primary-500);
+            transform: translateY(-2px);
+        }
+
+        .journey-step {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .journey-content {
+            flex: 1;
+        }
+
+        .journey-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.75rem;
+        }
+
+        .journey-description {
+            color: var(--steel-600);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .journey-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .journey-details li {
+            color: var(--steel-600);
+            font-size: 0.9375rem;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .journey-details li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            background: var(--primary-500);
+            border-radius: 50%;
+        }
+
+        /* Founding Client Section */
+        .founding-section {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(249, 115, 22, 0.05));
+            border-radius: var(--radius-xl);
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            text-align: center;
+        }
+
+        .founding-badge {
+            display: inline-block;
+            background: var(--primary-500);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .founding-section h2 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .founding-section > p {
+            color: var(--steel-600);
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .benefit-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .benefit-icon {
+            color: var(--primary-500);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: var(--steel-600);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Mike's Story Section */
+        .mikes-story {
+            background: #1A1A1A;
+            border-radius: var(--radius-xl);
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .mikes-story h2 {
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .mikes-story p {
+            color: var(--steel-600);
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        .mikes-story p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Page Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            min-height: 44px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-600));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+        }
+
         /* Footer */
         .footer {
-            background: var(--color-card-bg);
+            background: #1A1A1A;
             border-top: 1px solid var(--color-border);
             padding: 3rem 0 1.5rem;
         }
@@ -527,12 +618,13 @@
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--color-text-light);
+            color: #FFFFFF;
+            text-transform: none;
         }
 
         .footer-section p,
         .footer-section a {
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-size: 0.9375rem;
             line-height: 1.8;
         }
@@ -543,14 +635,16 @@
         }
 
         .footer-section a:hover {
-            color: var(--color-text-light);
+            color: #FFFFFF;
             text-decoration: underline;
         }
 
         .footer-brand {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            color: var(--color-text-light);
+            color: #FFFFFF;
+            font-weight: 700;
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
@@ -567,14 +661,14 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgba(239, 68, 68, 0.1);
+            background: rgba(220, 38, 38, 0.1);
             border-radius: 10px;
-            color: var(--color-red-primary);
+            color: var(--primary-500);
             transition: all 0.2s ease;
         }
 
         .footer-social a:hover {
-            background: var(--color-red-primary);
+            background: var(--primary-500);
             color: white;
             transform: translateY(-2px);
             text-decoration: none;
@@ -584,20 +678,12 @@
             padding-top: 2rem;
             border-top: 1px solid var(--color-border);
             text-align: center;
-            color: var(--color-text-gray);
+            color: var(--steel-600);
             font-size: 0.875rem;
         }
 
         /* Tablet Breakpoint */
         @media (min-width: 640px) {
-            h1 {
-                font-size: 3rem;
-            }
-
-            h2 {
-                font-size: 2.5rem;
-            }
-
             .transformations-section {
                 padding: var(--section-padding-tablet) 0;
             }
@@ -607,7 +693,11 @@
                 padding-bottom: var(--section-padding-tablet);
             }
 
-            .transformations-grid {
+            .journey-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -618,14 +708,6 @@
 
         /* Desktop Breakpoint */
         @media (min-width: 1024px) {
-            h1 {
-                font-size: 3.75rem;
-            }
-
-            h2 {
-                font-size: 3rem;
-            }
-
             .transformations-section {
                 padding: var(--section-padding-desktop) 0;
             }
@@ -643,8 +725,20 @@
                 display: none;
             }
 
-            .transformations-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .journey-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .founding-section {
+                padding: 4rem 3rem;
+            }
+
+            .mikes-story {
+                padding: 4rem 3rem;
             }
 
             .footer-content {
@@ -699,136 +793,150 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Success Stories</h1>
-            <p>Real people, real results. See the incredible transformations from clients who committed to their goals and trusted the process. Your story could be next.</p>
+            <h1>Be Our Next Success Story</h1>
+            <p>Big Mike's Personal Training is a brand new business, which means you have a unique opportunity to be among our founding clients. No generic stock photos here - just an honest commitment to helping you achieve real results.</p>
         </div>
     </section>
 
     <!-- Transformations Section -->
     <main id="main-content" class="transformations-section">
         <div class="container">
-            <div class="transformations-grid">
-                <!-- Transformation Card 1 -->
-                <article class="transformation-card">
-                    <div class="transformation-images">
-                        <div class="transformation-before" data-label="Before">
-                            <div class="transformation-placeholder">
-                                Before Photo<br>Coming Soon
-                            </div>
-                        </div>
-                        <div class="transformation-after" data-label="After">
-                            <div class="transformation-placeholder">
-                                After Photo<br>Coming Soon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transformation-content">
-                        <div class="transformation-stats">
-                            <div class="transformation-stat">
-                                <span class="transformation-number">-30</span>
-                                <span class="transformation-unit">lbs</span>
-                            </div>
-                            <span class="transformation-duration">4 months</span>
-                        </div>
-                        <h3 class="transformation-name">John D.</h3>
-                        <p class="transformation-quote">"Mike helped me build sustainable habits that actually fit my busy schedule. Down 30 pounds and feeling stronger than ever."</p>
+            <!-- Journey Overview -->
+            <div class="journey-intro">
+                <h2>Your Transformation Journey</h2>
+                <p>Every transformation starts with a single step. Here's exactly what your journey with Big Mike's looks like from day one to reaching your goals.</p>
+            </div>
+
+            <div class="journey-grid">
+                <!-- Step 1 -->
+                <article class="journey-card">
+                    <div class="journey-step">1</div>
+                    <div class="journey-content">
+                        <h3 class="journey-title">Free Consultation</h3>
+                        <p class="journey-description">We start with a no-pressure conversation about your goals, your current fitness level, and what's held you back before. This isn't a sales pitch - it's about understanding exactly what you want to achieve and whether we're a good fit to work together.</p>
+                        <ul class="journey-details">
+                            <li>Discuss your specific goals (weight loss, muscle gain, strength, etc.)</li>
+                            <li>Review your schedule and availability</li>
+                            <li>Talk about any injuries or limitations</li>
+                            <li>Answer all your questions - no obligation</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Transformation Card 2 -->
-                <article class="transformation-card">
-                    <div class="transformation-images">
-                        <div class="transformation-before" data-label="Before">
-                            <div class="transformation-placeholder">
-                                Before Photo<br>Coming Soon
-                            </div>
-                        </div>
-                        <div class="transformation-after" data-label="After">
-                            <div class="transformation-placeholder">
-                                After Photo<br>Coming Soon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transformation-content">
-                        <div class="transformation-stats">
-                            <div class="transformation-stat">
-                                <span class="transformation-number">-25</span>
-                                <span class="transformation-unit">lbs</span>
-                            </div>
-                            <span class="transformation-duration">3 months</span>
-                        </div>
-                        <h3 class="transformation-name">Sarah M.</h3>
-                        <p class="transformation-quote">"I've tried so many programs before, but Mike's approach actually worked. No BS, just real training and real results."</p>
+                <!-- Step 2 -->
+                <article class="journey-card">
+                    <div class="journey-step">2</div>
+                    <div class="journey-content">
+                        <h3 class="journey-title">Custom Plan Creation</h3>
+                        <p class="journey-description">Based on our consultation, I'll build a program specifically for you - not a cookie-cutter template. Your plan considers your goals, experience level, available equipment, and the time you can realistically commit.</p>
+                        <ul class="journey-details">
+                            <li>Personalized workout programming</li>
+                            <li>Realistic timeline and milestones</li>
+                            <li>Nutrition guidance that fits your lifestyle</li>
+                            <li>Progress tracking system</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Transformation Card 3 -->
-                <article class="transformation-card">
-                    <div class="transformation-images">
-                        <div class="transformation-before" data-label="Before">
-                            <div class="transformation-placeholder">
-                                Before Photo<br>Coming Soon
-                            </div>
-                        </div>
-                        <div class="transformation-after" data-label="After">
-                            <div class="transformation-placeholder">
-                                After Photo<br>Coming Soon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transformation-content">
-                        <div class="transformation-stats">
-                            <div class="transformation-stat">
-                                <span class="transformation-number">+15</span>
-                                <span class="transformation-unit">lbs muscle</span>
-                            </div>
-                            <span class="transformation-duration">5 months</span>
-                        </div>
-                        <h3 class="transformation-name">Mike T.</h3>
-                        <p class="transformation-quote">"Gained 15 pounds of muscle and hit PRs I never thought possible. Mike's programming is legit."</p>
+                <!-- Step 3 -->
+                <article class="journey-card">
+                    <div class="journey-step">3</div>
+                    <div class="journey-content">
+                        <h3 class="journey-title">Training & Support</h3>
+                        <p class="journey-description">This is where the work happens. Whether we're training together in person or I'm coaching you remotely, you'll never feel lost or unsure what to do. I'm here to guide every rep, answer every question, and keep you accountable.</p>
+                        <ul class="journey-details">
+                            <li>Expert form coaching and technique</li>
+                            <li>Regular check-ins and program adjustments</li>
+                            <li>Direct access to me for questions</li>
+                            <li>Motivation when you need it most</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- Placeholder Card -->
-                <article class="transformation-card">
-                    <div class="transformation-images">
-                        <div class="transformation-before" data-label="Before">
-                            <div class="transformation-placeholder">
-                                Your Photo<br>Here
-                            </div>
-                        </div>
-                        <div class="transformation-after" data-label="After">
-                            <div class="transformation-placeholder">
-                                Your Results<br>Here
-                            </div>
-                        </div>
-                    </div>
-                    <div class="transformation-content">
-                        <div class="transformation-stats">
-                            <div class="transformation-stat">
-                                <span class="transformation-number">?</span>
-                                <span class="transformation-unit">Your goal</span>
-                            </div>
-                            <span class="transformation-duration">Your timeline</span>
-                        </div>
-                        <h3 class="transformation-name">This Could Be You</h3>
-                        <p class="transformation-quote">"Your transformation story starts with a single decision. Let's make it happen together."</p>
+                <!-- Step 4 -->
+                <article class="journey-card">
+                    <div class="journey-step">4</div>
+                    <div class="journey-content">
+                        <h3 class="journey-title">Results & Beyond</h3>
+                        <p class="journey-description">As you progress, we'll celebrate your wins, adjust your program to keep challenging you, and build habits that stick long after you've hit your goals. This isn't about quick fixes - it's about changing your life.</p>
+                        <ul class="journey-details">
+                            <li>Track measurable progress together</li>
+                            <li>Progressive program updates</li>
+                            <li>Build sustainable long-term habits</li>
+                            <li>Optional: Share your success story</li>
+                        </ul>
                     </div>
                 </article>
+            </div>
+
+            <!-- Founding Client Benefits -->
+            <div class="founding-section">
+                <div class="founding-badge">Limited Opportunity</div>
+                <h2>Founding Client Benefits</h2>
+                <p>As a new business, I'm looking for motivated individuals who want to start their fitness journey. Being a founding client comes with exclusive advantages:</p>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h4>Introductory Pricing</h4>
+                        <p>Lock in lower rates as a founding client - prices will increase as the business grows</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h4>Maximum Attention</h4>
+                        <p>With a smaller client roster, you get more personalized focus and faster response times</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4>Shape the Business</h4>
+                        <p>Your feedback directly influences how I develop my training programs and services</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                            </svg>
+                        </div>
+                        <h4>Be the First Success Story</h4>
+                        <p>Your transformation could inspire others - and you'll always be part of how it all started</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mike's Story Section -->
+            <div class="mikes-story">
+                <h2>Why I Became a Trainer</h2>
+                <p>I'm Mike, I'm 19 years old, and fitness changed my life. I started training because I wanted to feel stronger, more confident, and in control of my health. Along the way, I discovered a passion for helping others experience that same transformation.</p>
+                <p>I'm CPR/First Aid certified and committed to continuing my education in fitness and nutrition. I may be new to running a business, but I bring energy, dedication, and a genuine desire to see you succeed. When you win, I win - it's that simple.</p>
+                <p>I'm not here to give you the runaround or make empty promises. I'm here to work hard alongside you and prove that real results come from real effort and the right guidance.</p>
             </div>
 
             <!-- CTA Section -->
             <div class="cta-section">
                 <div class="cta-icon">
                     <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22,4 12,14.01 9,11.01"/>
                     </svg>
                 </div>
-                <h2>Start Your Transformation</h2>
-                <p>Ready to write your own success story? Let's build a plan that actually fits your life and gets you real results.</p>
-                <a href="index.html#contact" class="btn btn-primary">Book Your Free Consultation</a>
+                <h2>Start Your Transformation Today</h2>
+                <p>No client transformations to show you yet - but yours could be the first. Let's talk about your goals and see if we're a good fit.</p>
+                <a href="booking.html" class="btn btn-primary">Book Your Free Consultation</a>
             </div>
         </div>
     </main>
@@ -898,6 +1006,10 @@
 
             <div class="footer-bottom">
                 <p>&copy; <span id="copyright-year"></span> Big Mike's Personal Training. All rights reserved.</p>
+                <nav style="margin-top: 1rem;">
+                    <a href="privacy.html" style="color: var(--steel-400); margin-right: 1.5rem;">Privacy Policy</a>
+                    <a href="terms.html" style="color: var(--steel-400);">Terms of Service</a>
+                </nav>
             </div>
         </div>
     </footer>
